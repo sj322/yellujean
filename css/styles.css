@@ -516,12 +516,16 @@ ul, ol {
 }
 
 .hero__desc {
-  font-size: 15px;
-  font-weight: 300;
-  max-width: 360px;
-  opacity: 0.85;
+  font-size: clamp(16px, 1.8vw, 18px);
+  font-weight: 400;
+  max-width: 420px;
   margin-bottom: 36px;
-  line-height: 1.7;
+  line-height: 1.75;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-shadow:
+    0 1px 8px rgba(0, 0, 0, 0.5),
+    0 2px 20px rgba(0, 0, 0, 0.35);
 }
 
 .hero__cta {
