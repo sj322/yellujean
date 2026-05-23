@@ -1,3 +1,26 @@
+const WOMEN_IMAGES = [
+  "women/IMG_7144/main.jpg",
+  "women/IMG_7201/main.jpg",
+  "women/IMG_7204/main.jpg",
+  "women/IMG_7207/main.jpg",
+];
+
+const MEN_IMAGES = [
+  "men/IMG_5125/main.jpg",
+  "men/IMG_7265/main.jpg",
+  "men/IMG_8310/main.jpg",
+  "men/IMG_8319/main.jpg",
+  "men/IMG_8477/main.jpg",
+  "men/IMG_8653/main.jpg",
+  "men/IMG_8658/main.jpg",
+  "men/IMG_9158/main.jpg",
+];
+
+function productImage(category, index, offset = 0) {
+  const pool = category === "women" ? WOMEN_IMAGES : MEN_IMAGES;
+  return pool[(index + offset) % pool.length];
+}
+
 const YELLUJEAN_PRODUCTS = [
   {
     id: 1,
@@ -7,8 +30,8 @@ const YELLUJEAN_PRODUCTS = [
     category: "women",
     type: "outer",
     tags: ["new", "best"],
-    image: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&q=80",
-    imageHover: "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=600&q=80",
+    image: productImage("women", 0),
+    imageHover: productImage("women", 0, 1),
     badge: "NEW",
   },
   {
@@ -19,8 +42,8 @@ const YELLUJEAN_PRODUCTS = [
     category: "women",
     type: "knit",
     tags: ["new"],
-    image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&q=80",
-    imageHover: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80",
+    image: productImage("women", 1),
+    imageHover: productImage("women", 1, 1),
     badge: "NEW",
   },
   {
@@ -31,8 +54,8 @@ const YELLUJEAN_PRODUCTS = [
     category: "women",
     type: "pants",
     tags: ["best"],
-    image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80",
-    imageHover: "https://images.unsplash.com/photo-1624378515194-6bbdb73f2194?w=600&q=80",
+    image: productImage("women", 2),
+    imageHover: productImage("women", 2, 1),
     badge: null,
   },
   {
@@ -43,8 +66,8 @@ const YELLUJEAN_PRODUCTS = [
     category: "women",
     type: "top",
     tags: ["new"],
-    image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&q=80",
-    imageHover: "https://images.unsplash.com/photo-1583496661160-fb2206d8fb9a?w=600&q=80",
+    image: productImage("women", 3),
+    imageHover: productImage("women", 3, 1),
     badge: "NEW",
   },
   {
@@ -55,8 +78,8 @@ const YELLUJEAN_PRODUCTS = [
     category: "women",
     type: "outer",
     tags: ["best", "sale"],
-    image: "https://images.unsplash.com/photo-1551028711-00167b16eac5?w=600&q=80",
-    imageHover: "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&q=80",
+    image: productImage("women", 0, 2),
+    imageHover: productImage("women", 0, 3),
     badge: "20%",
   },
   {
@@ -67,8 +90,8 @@ const YELLUJEAN_PRODUCTS = [
     category: "women",
     type: "outer",
     tags: ["sale"],
-    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&q=80",
-    imageHover: "https://images.unsplash.com/photo-1576995850634-875362e5aeca?w=600&q=80",
+    image: productImage("women", 1, 2),
+    imageHover: productImage("women", 1, 3),
     badge: "20%",
   },
   {
@@ -79,8 +102,8 @@ const YELLUJEAN_PRODUCTS = [
     category: "men",
     type: "outer",
     tags: ["new", "best"],
-    image: "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&q=80",
-    imageHover: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80",
+    image: productImage("men", 0),
+    imageHover: productImage("men", 0, 1),
     badge: "NEW",
   },
   {
@@ -91,8 +114,8 @@ const YELLUJEAN_PRODUCTS = [
     category: "men",
     type: "top",
     tags: ["new"],
-    image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2b?w=600&q=80",
-    imageHover: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&q=80",
+    image: productImage("men", 1),
+    imageHover: productImage("men", 1, 1),
     badge: "NEW",
   },
   {
@@ -103,8 +126,8 @@ const YELLUJEAN_PRODUCTS = [
     category: "men",
     type: "pants",
     tags: ["best"],
-    image: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&q=80",
-    imageHover: "https://images.unsplash.com/photo-1624378515194-6bbdb73f2194?w=600&q=80",
+    image: productImage("men", 2),
+    imageHover: productImage("men", 2, 1),
     badge: null,
   },
   {
@@ -115,8 +138,8 @@ const YELLUJEAN_PRODUCTS = [
     category: "men",
     type: "outer",
     tags: ["sale", "best"],
-    image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80",
-    imageHover: "https://images.unsplash.com/photo-1617137968427-85924c800a22?w=600&q=80",
+    image: productImage("men", 3),
+    imageHover: productImage("men", 3, 1),
     badge: "20%",
   },
   {
@@ -175,8 +198,8 @@ const YELLUJEAN_PRODUCTS = [
     category: "women",
     type: "knit",
     tags: ["new"],
-    image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80",
-    imageHover: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&q=80",
+    image: productImage("women", 2, 2),
+    imageHover: productImage("women", 2, 3),
     badge: "NEW",
   },
   {
@@ -187,8 +210,8 @@ const YELLUJEAN_PRODUCTS = [
     category: "women",
     type: "pants",
     tags: ["sale"],
-    image: "https://images.unsplash.com/photo-1583496661160-fb2206d8fb9a?w=600&q=80",
-    imageHover: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&q=80",
+    image: productImage("women", 3, 2),
+    imageHover: productImage("women", 3, 3),
     badge: "20%",
   },
   {
@@ -199,8 +222,8 @@ const YELLUJEAN_PRODUCTS = [
     category: "men",
     type: "top",
     tags: ["new"],
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80",
-    imageHover: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80",
+    image: productImage("men", 4),
+    imageHover: productImage("men", 4, 1),
     badge: "NEW",
   },
   {
@@ -235,7 +258,7 @@ const YELLUJEAN_EDITORIALS = [
     excerpt: "????? ??? ???? ???",
     date: "2026-05-20",
     category: "essay",
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=900&q=80",
+    image: "assets/home/IMG_7232.jpg",
     featured: true,
   },
   {
@@ -244,7 +267,7 @@ const YELLUJEAN_EDITORIALS = [
     excerpt: "??? ???? ??? ???",
     date: "2026-05-15",
     category: "guide",
-    image: "https://images.unsplash.com/photo-1485230895295-76640b7bd749?w=600&q=80",
+    image: "assets/home/IMG_7244.jpg",
     featured: false,
   },
   {
@@ -253,7 +276,7 @@ const YELLUJEAN_EDITORIALS = [
     excerpt: "yellujean ????? ?? ??? ???",
     date: "2026-05-08",
     category: "interview",
-    image: "https://images.unsplash.com/photo-1529139574469-a303027c1d8b?w=600&q=80",
+    image: "assets/home/IMG_6756.jpg",
     featured: false,
   },
   {
@@ -262,7 +285,7 @@ const YELLUJEAN_EDITORIALS = [
     excerpt: "?? ?? ? ?? ? ??? 6",
     date: "2026-05-01",
     category: "edit",
-    image: "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=600&q=80",
+    image: "assets/home/IMG_8310.jpg",
     featured: false,
   },
   {
@@ -271,7 +294,7 @@ const YELLUJEAN_EDITORIALS = [
     excerpt: "??? ??? ???? ??? ?",
     date: "2026-04-22",
     category: "lookbook",
-    image: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=600&q=80",
+    image: "assets/home/IMG_8319.jpg",
     featured: false,
   },
   {
@@ -280,7 +303,7 @@ const YELLUJEAN_EDITORIALS = [
     excerpt: "???? ????, ?? ??? ?? ??",
     date: "2026-04-10",
     category: "interview",
-    image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80",
+    image: "assets/home/IMG_2906.jpg",
     featured: false,
   },
 ];
@@ -325,4 +348,19 @@ const PAGE_CONFIG = {
 
 function formatPrice(n) {
   return "?" + n.toLocaleString("ko-KR");
+}
+
+function resolveProductAsset(path) {
+  if (!path || path.startsWith("http")) return path;
+  const inPages = /\/pages\//.test(window.location.pathname);
+  return (inPages ? "../" : "") + "assets/products/" + path;
+}
+
+function resolveSiteAsset(path) {
+  if (!path || path.startsWith("http")) return path;
+  const inPages = /\/pages\//.test(window.location.pathname);
+  if (path.startsWith("assets/")) {
+    return (inPages ? "../" : "") + path;
+  }
+  return path;
 }

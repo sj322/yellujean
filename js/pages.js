@@ -53,8 +53,8 @@
       <article class="product-card">
         <a href="#" class="product-card__link">
           <div class="product-card__img-wrap">
-            <img src="${p.image}" alt="${p.name}" class="product-card__img" loading="lazy" />
-            <img src="${p.imageHover}" alt="${p.name} 착용" class="product-card__img product-card__img--hover" loading="lazy" />
+            <img src="${resolveProductAsset(p.image)}" alt="${p.name}" class="product-card__img" loading="lazy" />
+            <img src="${resolveProductAsset(p.imageHover)}" alt="${p.name} 착용" class="product-card__img product-card__img--hover" loading="lazy" />
             ${badge}
             <button class="product-card__wish" aria-label="찜하기" type="button">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-8 11-8 11z"/></svg>
@@ -140,7 +140,7 @@
     return `
       <article class="editorial-list-card${featured}">
         <a href="#">
-          <img src="${item.image}" alt="${item.title}" loading="lazy" />
+          <img src="${resolveSiteAsset(item.image)}" alt="${item.title}" loading="lazy" />
           <div class="editorial-list-card__body">
             <span class="editorial-list-card__cat">${categoryLabels[item.category] || item.category}</span>
             <time datetime="${item.date}">${item.date.replace(/-/g, ".")}</time>
