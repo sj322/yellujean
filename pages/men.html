@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>yellujean | MEN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500;600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+</head>
+<body data-page="men">
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="page-hero__breadcrumb" aria-label="breadcrumb">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <span>MEN</span>
+        </nav>
+        <span class="page-hero__label">남성 컬렉션</span>
+        <h1 class="page-hero__title">MEN</h1>
+        <p class="page-hero__desc">도시적이고 절제된 실루엣의 남성 라인.</p>
+      </div>
+    </section>
+
+    <section class="listing-page">
+      <div class="container listing-layout">
+        <aside class="listing-sidebar">
+          <div>
+            <h3>카테고리</h3>
+            <div class="filter-list" role="group" aria-label="카테고리 필터">
+              <button type="button" data-filter-type="all" class="active">전체</button>
+              <button type="button" data-filter-type="outer">아우터</button>
+              <button type="button" data-filter-type="top">상의</button>
+              <button type="button" data-filter-type="knit">니트</button>
+              <button type="button" data-filter-type="pants">팬츠</button>
+            </div>
+          </div>
+        </aside>
+
+        <div class="listing-main">
+          <div class="listing-toolbar">
+            <p class="listing-toolbar__count" id="product-count">—</p>
+            <div class="listing-toolbar__sort">
+              <label for="sort-select">정렬</label>
+              <select id="sort-select">
+                <option value="newest">최신순</option>
+                <option value="price-low">낮은 가격순</option>
+                <option value="price-high">높은 가격순</option>
+                <option value="name">이름순</option>
+              </select>
+            </div>
+          </div>
+          <div class="listing-grid" id="product-grid"></div>
+          <div class="empty-state" id="empty-state">
+            <h3>상품이 없습니다</h3>
+            <p>다른 카테고리를 선택해 보세요.</p>
+          </div>
+          <nav class="pagination" aria-label="페이지">
+            <button type="button" disabled aria-label="이전">←</button>
+            <span class="is-current">1</span>
+            <button type="button">2</button>
+            <button type="button" aria-label="다음">→</button>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/products.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/pages.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

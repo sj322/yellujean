@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>yellujean | EDITORIAL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500;600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/pages.css" />
+</head>
+<body data-page="editorial">
+  <main>
+    <section class="editorial-page-hero">
+      <div class="container">
+        <nav class="page-hero__breadcrumb">
+          <a href="../index.html">Home</a>
+          <span> / </span>
+          <span>EDITORIAL</span>
+        </nav>
+        <h1>yellujean Magazine</h1>
+        <p>패션, 문화, 그리고 옷에 관한 이야기</p>
+        <div class="editorial-filters" role="group" aria-label="에디토리얼 필터">
+          <button type="button" class="active" data-editorial-filter="all">전체</button>
+          <button type="button" data-editorial-filter="essay">Essay</button>
+          <button type="button" data-editorial-filter="guide">Guide</button>
+          <button type="button" data-editorial-filter="lookbook">Lookbook</button>
+          <button type="button" data-editorial-filter="interview">Interview</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="editorial-list">
+      <div class="container">
+        <div class="editorial-list-grid" id="editorial-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/products.js"></script>
+  <script src="../js/layout.js"></script>
+  <script src="../js/pages.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    (function () {
+      const btns = document.querySelectorAll("[data-editorial-filter]");
+      const grid = document.getElementById("editorial-grid");
+      if (!grid || !btns.length) return;
+
+      const categoryLabels = {
+        essay: "Essay",
+        guide: "Guide",
+        interview: "Interview",
+        edit: "The Edit",
+        lookbook: "Lookbook",
+      };
+
+      function render(filter) {
+        const items = filter === "all"
+          ? YELLUJEAN_EDITORIALS
+          : YELLUJEAN_EDITORIALS.filter((e) => e.category === filter);
+
+        grid.innerHTML = items.map((item) => {
+          const featured = item.featured ? " editorial-list-card--featured" : "";
+          return `
+            <article class="editorial-list-card${featured}">
+              <a href="#">
+                <img src="${item.image}" alt="${item.title}" loading="lazy" />
+                <div class="editorial-list-card__body">
+                  <span class="editorial-list-card__cat">${categoryLabels[item.category] || item.category}</span>
+                  <time datetime="${item.date}">${item.date.replace(/-/g, ".")}</time>
+                  <h3>${item.title}</h3>
+                  <p>${item.excerpt}</p>
+                </div>
+              </a>
+            </article>`;
+        }).join("");
+      }
+
+      btns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          render(btn.dataset.editorialFilter);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
