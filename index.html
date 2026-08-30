@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="yellujean 공식 온라인 스토어. 직접 기획·생산하는 자사 의류 브랜드." />
-  <title>yellujean | Official Store</title>
+  <meta name="description" content="VLAHDANG 공식 온라인 스토어" />
+  <title>VLAHDANG | Official Store</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500;600&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body data-page="home">
-  <!-- 상단 유틸 바 -->
   <div class="utility-bar">
     <div class="container utility-bar__inner">
       <span>26 S/S 시즌 오픈 · 무료배송 10만원 이상</span>
@@ -23,41 +22,47 @@
     </div>
   </div>
 
-  <!-- 헤더 -->
   <header class="header" id="header">
     <div class="container header__inner">
       <div class="header__left">
         <button class="header__menu-btn" aria-label="메뉴 열기" id="menuBtn">
           <span></span><span></span>
         </button>
-        <nav class="header__nav" aria-label="주요 카테고리">
-          <a href="pages/new.html">NEW</a>
-          <a href="pages/women.html">WOMEN</a>
-          <a href="pages/men.html">MEN</a>
-          <a href="pages/acc.html">ACC</a>
+        <nav class="header__nav header__nav--menu" aria-label="주요 카테고리">
+          <div class="header__menu-item">
+            <button class="header__menu-trigger" type="button">Menu</button>
+            <ul class="header__submenu">
+              <li><a href="pages/new.html">&#51204;&#52404;</a></li>
+              <li><a href="pages/new.html">NEW</a></li>
+              <li><a href="pages/new.html?type=top">&#49345;&#51032;</a></li>
+              <li><a href="pages/new.html?type=pants">&#54616;&#51032;</a></li>
+              <li><a href="pages/new.html?type=outer">&#50500;&#50864;&#53552;</a></li>
+              <li><a href="pages/new.html?type=set">&#49483;&#50629;</a></li>
+              <li><a href="pages/acc.html">&#50529;&#49464;&#49436;&#47532;</a></li>
+            </ul>
+          </div>
         </nav>
       </div>
 
-      <a href="index.html" class="brand-logo brand-logo--header" aria-label="yellujean">
-        <span class="brand-logo__wordmark" aria-hidden="true">
-          <span class="brand-logo__yellu">yellu</span><span class="brand-logo__jean">jean</span>
-        </span>
+      <a href="index.html" class="brand-logo brand-logo--header" aria-label="Logo">
+        <img src="assets/Logo/Logo.jpg" alt="Logo" class="brand-logo__img" />
       </a>
 
       <div class="header__right">
         <nav class="header__nav" aria-label="보조 메뉴">
-          <a href="pages/about.html">ABOUT</a>
-          <a href="pages/editorial.html">EDITORIAL</a>
-          <a href="pages/sale.html">SALE</a>
+          <a href="pages/editorial.html">Archive</a>
         </nav>
         <div class="header__actions">
-          <button class="header__icon-btn" aria-label="검색">
+          <button class="header__icon-btn" aria-label="search">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg>
           </button>
-          <a href="#" class="header__icon-btn" aria-label="마이페이지">
+          <a href="#" class="header__icon-btn" aria-label="wishlist">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-8 11-8 11z"/></svg>
+          </a>
+          <a href="#" class="header__icon-btn" aria-label="account">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-7 8-7s8 3 8 7"/></svg>
           </a>
-          <a href="#" class="header__icon-btn header__cart" aria-label="장바구니">
+          <a href="#" class="header__icon-btn header__cart" aria-label="cart">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L5 3H2"/></svg>
             <span class="header__cart-count">2</span>
           </a>
@@ -66,52 +71,35 @@
     </div>
   </header>
 
-  <!-- 모바일 메뉴 -->
   <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu__header">
-      <span class="brand-logo brand-logo--menu" aria-label="yellujean">
-        <span class="brand-logo__wordmark" aria-hidden="true">
-          <span class="brand-logo__yellu">yellu</span><span class="brand-logo__jean">jean</span>
-        </span>
+      <span class="brand-logo brand-logo--menu" aria-label="Logo">
+        <img src="assets/Logo/Logo.jpg" alt="Logo" class="brand-logo__img" />
       </span>
       <button id="menuClose" aria-label="메뉴 닫기">&times;</button>
     </div>
     <nav class="mobile-menu__nav">
       <a href="pages/new.html">NEW</a>
-      <a href="pages/women.html">WOMEN</a>
-      <a href="pages/men.html">MEN</a>
       <a href="pages/acc.html">ACC</a>
-      <a href="pages/about.html">ABOUT</a>
-      <a href="pages/editorial.html">EDITORIAL</a>
-      <a href="pages/sale.html">SALE</a>
+      <a href="pages/editorial.html">Archive</a>
     </nav>
   </aside>
   <div class="overlay" id="overlay"></div>
 
   <main>
-    <!-- 히어로 -->
     <section class="hero">
       <div class="hero__media">
-        <img
-          src="assets/home/IMG_7244.jpg"
-          alt="26 Spring Summer 컬렉션"
-          class="hero__img"
-        />
+        <img src="assets/home/main.jpg" alt="26 Spring Summer 컬렉션" class="hero__img" />
         <div class="hero__overlay"></div>
-      </div>
+      <!-- </div>
       <div class="hero__content container">
         <p class="hero__label">26 S/S Collection</p>
-        <h1 class="hero__title">
-          Quiet<br />
-          <em>Confidence</em>
-        </h1>
-        <!-- <p class="hero__desc">구조와 여백으로 말하는 옷. 이번 시즌, 가장 자연스러운 형태.</p> -->
+        <h1 class="hero__title">Quiet<br /><em>Confidence</em></h1>
         <p class="hero__desc">옷이 아닌, 분위기와 자신감을 파는 곳</p>
-
         <div class="hero__cta">
           <a href="#" class="btn btn--primary">컬렉션 보기</a>
-          <a href="#" class="btn btn--ghost">룩북</a>
-        </div>
+          <a href="pages/editorial.html" class="btn btn--ghost">Archive</a>
+        </div> -->
       </div>
       <div class="hero__scroll">
         <span>Scroll</span>
@@ -119,147 +107,96 @@
       </div>
     </section>
 
-    <!-- 퀵 카테고리 -->
-    <section class="quick-nav">
-      <div class="container">
-        <ul class="quick-nav__list">
-          <li><a href="pages/new.html"><span class="quick-nav__num">01</span> 신상품</a></li>
-          <li><a href="pages/women.html"><span class="quick-nav__num">02</span> 베스트</a></li>
-          <li><a href="pages/women.html"><span class="quick-nav__num">03</span> 아우터</a></li>
-          <li><a href="pages/women.html"><span class="quick-nav__num">04</span> 니트</a></li>
-          <li><a href="pages/men.html"><span class="quick-nav__num">05</span> 팬츠</a></li>
-          <li><a href="pages/acc.html"><span class="quick-nav__num">06</span> 액세서리</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 에디토리얼 배너 -->
-    <section class="editorial-banner">
-      <div class="container editorial-banner__grid">
-        <a href="pages/women.html" class="editorial-card editorial-card--large">
-          <img src="assets/home/IMG_7232.jpg" alt="The Edit — 26 S/S 컬렉션" />
-          <div class="editorial-card__content">
-            <span class="editorial-card__tag">The Edit</span>
-            <h2>Soft Structure</h2>
-            <p>여성 · 26 S/S</p>
-          </div>
-        </a>
-        <a href="pages/men.html" class="editorial-card">
-          <img src="assets/home/IMG_2906.jpg" alt="Men's Line" />
-          <div class="editorial-card__content">
-            <span class="editorial-card__tag">Men</span>
-            <h2>Urban Line</h2>
-          </div>
-        </a>
-        <a href="pages/acc.html" class="editorial-card">
-          <img src="assets/home/IMG_5836.jpg" alt="Accessories" />
-          <div class="editorial-card__content">
-            <span class="editorial-card__tag">Acc</span>
-            <h2>Details</h2>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <!-- 신상품 -->
     <section class="section products-section" id="new">
       <div class="container">
         <header class="section-header">
           <div class="section-header__left">
-            <span class="section-label">New Arrivals</span>
-            <h2 class="section-title">이번 주 입고</h2>
+            <span class="section-label">Specially Selected</span>
+            <h2 class="section-title">MD 추천</h2>
           </div>
-          <a href="pages/new.html" class="section-link">전체 보기 →</a>
+          <a href="pages/md.html" class="section-link">전체 보기 →</a>
         </header>
 
-        <div class="product-grid">
-          <article class="product-card">
-            <a href="pages/new.html" class="product-card__link">
-              <div class="product-card__img-wrap">
-                <img src="assets/products/women/IMG_7144/main.jpg" alt="오버사이즈 울 코트" class="product-card__img" />
-                <img src="assets/products/women/IMG_7201/main.jpg" alt="오버사이즈 울 코트 착용" class="product-card__img product-card__img--hover" />
-                <span class="product-card__badge">NEW</span>
-                <button class="product-card__wish" aria-label="찜하기">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-8 11-8 11z"/></svg>
-                </button>
-              </div>
-              <div class="product-card__info">
-                <span class="product-card__category">아우터</span>
-                <h3 class="product-card__name">오버사이즈 울 블렌드 코트</h3>
-                <p class="product-card__price">₩890,000</p>
-              </div>
-            </a>
-          </article>
+        <div class="md-carousel" data-md-carousel>
+          <button class="md-carousel__btn md-carousel__btn--prev" type="button" aria-label="이전 상품" data-md-carousel-prev>&larr;</button>
+          <div class="md-carousel__viewport">
+            <div class="product-grid md-carousel__track">
+              <article class="product-card">
+                <a href="pages/new.html" class="product-card__link">
+                  <div class="product-card__img-wrap">
+                    <img src="assets/products/women/IMG_7144/main.jpg" alt="오버사이즈 울 코트" class="product-card__img" />
+                    <img src="assets/products/women/IMG_7201/main.jpg" alt="오버사이즈 울 코트 착용" class="product-card__img product-card__img--hover" />
+                    <span class="product-card__badge">NEW</span>
+                    <button class="product-card__wish" aria-label="찜하기">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-8 11-8 11z"/></svg>
+                    </button>
+                  </div>
+                  <div class="product-card__info">
+                    <span class="product-card__category">아우터</span>
+                    <h3 class="product-card__name">오버사이즈 울 블렌드 코트</h3>
+                    <p class="product-card__price">₩890,000</p>
+                  </div>
+                </a>
+              </article>
 
-          <article class="product-card">
-            <a href="#" class="product-card__link">
-              <div class="product-card__img-wrap">
-                <img src="assets/products/women/IMG_7204/main.jpg" alt="캐시미어 니트" class="product-card__img" />
-                <img src="assets/products/women/IMG_7207/main.jpg" alt="캐시미어 니트 착용" class="product-card__img product-card__img--hover" />
-                <span class="product-card__badge">NEW</span>
-                <button class="product-card__wish" aria-label="찜하기">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-8 11-8 11z"/></svg>
-                </button>
-              </div>
-              <div class="product-card__info">
-                <span class="product-card__category">니트</span>
-                <h3 class="product-card__name">캐시미어 블렌드 크루넥</h3>
-                <p class="product-card__price">₩420,000</p>
-              </div>
-            </a>
-          </article>
+              <article class="product-card">
+                <a href="#" class="product-card__link">
+                  <div class="product-card__img-wrap">
+                    <img src="assets/products/women/IMG_7204/main.jpg" alt="캐시미어 니트" class="product-card__img" />
+                    <img src="assets/products/women/IMG_7207/main.jpg" alt="캐시미어 니트 착용" class="product-card__img product-card__img--hover" />
+                    <span class="product-card__badge">NEW</span>
+                    <button class="product-card__wish" aria-label="찜하기">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-8 11-8 11z"/></svg>
+                    </button>
+                  </div>
+                  <div class="product-card__info">
+                    <span class="product-card__category">니트</span>
+                    <h3 class="product-card__name">캐시미어 블렌드 크루넥</h3>
+                    <p class="product-card__price">₩420,000</p>
+                  </div>
+                </a>
+              </article>
 
-          <article class="product-card">
-            <a href="#" class="product-card__link">
-              <div class="product-card__img-wrap">
-                <img src="assets/products/men/IMG_5125/main.jpg" alt="와이드 트라우저" class="product-card__img" />
-                <img src="assets/products/men/IMG_7265/main.jpg" alt="와이드 트라우저 착용" class="product-card__img product-card__img--hover" />
-                <button class="product-card__wish" aria-label="찜하기">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-8 11-8 11z"/></svg>
-                </button>
-              </div>
-              <div class="product-card__info">
-                <span class="product-card__category">팬츠</span>
-                <h3 class="product-card__name">와이드 코튼 트라우저</h3>
-                <p class="product-card__price">₩380,000</p>
-              </div>
-            </a>
-          </article>
+              <article class="product-card">
+                <a href="#" class="product-card__link">
+                  <div class="product-card__img-wrap">
+                    <img src="assets/products/men/IMG_5125/main.jpg" alt="와이드 트라우저" class="product-card__img" />
+                    <img src="assets/products/men/IMG_7265/main.jpg" alt="와이드 트라우저 착용" class="product-card__img product-card__img--hover" />
+                    <button class="product-card__wish" aria-label="찜하기">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-8 11-8 11z"/></svg>
+                    </button>
+                  </div>
+                  <div class="product-card__info">
+                    <span class="product-card__category">팬츠</span>
+                    <h3 class="product-card__name">와이드 코튼 트라우저</h3>
+                    <p class="product-card__price">₩380,000</p>
+                  </div>
+                </a>
+              </article>
 
-          <article class="product-card">
-            <a href="#" class="product-card__link">
-              <div class="product-card__img-wrap">
-                <img src="assets/products/women/IMG_7201/main.jpg" alt="실크 블라우스" class="product-card__img" />
-                <img src="assets/products/women/IMG_7204/main.jpg" alt="실크 블라우스 착용" class="product-card__img product-card__img--hover" />
-                <button class="product-card__wish" aria-label="찜하기">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-8 11-8 11z"/></svg>
-                </button>
-              </div>
-              <div class="product-card__info">
-                <span class="product-card__category">상의</span>
-                <h3 class="product-card__name">실크 타이 블라우스</h3>
-                <p class="product-card__price">₩520,000</p>
-              </div>
-            </a>
-          </article>
+              <article class="product-card">
+                <a href="#" class="product-card__link">
+                  <div class="product-card__img-wrap">
+                    <img src="assets/products/women/IMG_7201/main.jpg" alt="실크 블라우스" class="product-card__img" />
+                    <img src="assets/products/women/IMG_7204/main.jpg" alt="실크 블라우스 착용" class="product-card__img product-card__img--hover" />
+                    <button class="product-card__wish" aria-label="찜하기">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-8 11-8 11z"/></svg>
+                    </button>
+                  </div>
+                  <div class="product-card__info">
+                    <span class="product-card__category">상의</span>
+                    <h3 class="product-card__name">실크 타이 블라우스</h3>
+                    <p class="product-card__price">₩520,000</p>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+          <button class="md-carousel__btn md-carousel__btn--next" type="button" aria-label="다음 상품" data-md-carousel-next>&rarr;</button>
         </div>
       </div>
     </section>
 
-    <!-- 풀와이드 룩북 -->
-    <section class="lookbook">
-      <div class="lookbook__media">
-        <img src="assets/home/IMG_8319.jpg" alt="Spring Lookbook" />
-      </div>
-      <div class="lookbook__content">
-        <span class="lookbook__label">Lookbook · 26 S/S</span>
-        <h2 class="lookbook__title">Between<br />Seasons</h2>
-        <p class="lookbook__text">계절의 경계에서 만나는 레이어. 룩북 전체를 감상하세요.</p>
-        <a href="#" class="btn btn--outline-light">룩북 보기</a>
-      </div>
-    </section>
-
-    <!-- 베스트 랭킹 -->
     <section class="section ranking-section">
       <div class="container">
         <header class="section-header">
@@ -269,8 +206,6 @@
           </div>
           <div class="ranking-tabs" role="tablist">
             <button class="ranking-tabs__btn active" data-tab="all">전체</button>
-            <button class="ranking-tabs__btn" data-tab="women">여성</button>
-            <button class="ranking-tabs__btn" data-tab="men">남성</button>
           </div>
         </header>
 
@@ -330,146 +265,65 @@
               </div>
             </a>
           </li>
+          <li class="ranking-item">
+            <span class="ranking-item__rank">06</span>
+            <a href="#" class="ranking-item__link">
+              <img src="assets/products/men/IMG_8653/main.jpg" alt="코튼 셔츠" />
+              <div class="ranking-item__info">
+                <span class="ranking-item__category">상의</span>
+                <h3>릴렉스 코튼 셔츠</h3>
+                <p class="ranking-item__price">₩290,000</p>
+              </div>
+            </a>
+          </li>
         </ol>
       </div>
     </section>
 
-    <!-- 브랜드 소개 -->
-    <section class="section about-teaser">
-      <div class="container about-teaser__grid">
-        <div class="about-teaser__content">
-          <span class="section-label">About yellujean</span>
-          <h2 class="section-title">우리가 만드는<br />하나의 브랜드</h2>
-          <p>
-            yellujean은 여러 브랜드를 모아 파는 숍이 아닙니다.
-            기획·생산·유통을 직접 하는 자사 브랜드이며, 이곳은 공식 온라인 스토어입니다.
-          </p>
-          <a href="pages/about.html" class="btn btn--primary">브랜드 소개 보기</a>
-        </div>
-        <a href="pages/about.html" class="about-teaser__visual">
-          <img src="assets/home/IMG_9383.jpg" alt="yellujean 브랜드" />
-        </a>
+    <section class="archive">
+      <div class="archive__media">
+        <img src="assets/home/IMG_8319.jpg" alt="Spring Archive" />
       </div>
-    </section>
-
-    <!-- 매거진 / 에디토리얼 -->
-    <section class="section magazine-section">
-      <div class="container">
-        <header class="section-header">
-          <div class="section-header__left">
-            <span class="section-label">yellujean Magazine</span>
-            <h2 class="section-title">에디토리얼</h2>
-          </div>
-          <a href="pages/editorial.html" class="section-link">더 읽기 →</a>
-        </header>
-        <div class="magazine-grid">
-          <article class="magazine-card magazine-card--featured">
-            <a href="#">
-              <img src="assets/home/IMG_7232.jpg" alt="에디토리얼 — Form & Function" />
-              <div class="magazine-card__content">
-                <time datetime="2026-05-20">2026.05.20</time>
-                <h3>Form & Function — 옷이 말하는 방식</h3>
-                <p>미니멀리즘 너머의 실루엣에 대하여</p>
-              </div>
-            </a>
-          </article>
-          <article class="magazine-card">
-            <a href="#">
-              <img src="assets/home/IMG_6756.jpg" alt="에디토리얼 — Layering Guide" />
-              <div class="magazine-card__content">
-                <time datetime="2026-05-15">2026.05.15</time>
-                <h3>Layering Guide</h3>
-              </div>
-            </a>
-          </article>
-          <article class="magazine-card">
-            <a href="#">
-              <img src="assets/home/IMG_8310.jpg" alt="에디토리얼 — Studio Visit" />
-              <div class="magazine-card__content">
-                <time datetime="2026-05-08">2026.05.08</time>
-                <h3>Studio Visit: Seoul</h3>
-              </div>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 뉴스레터 -->
-    <section class="newsletter">
-      <div class="container newsletter__inner">
-        <div class="newsletter__text">
-          <h2>Stay in the loop</h2>
-          <p>신상 입고, 프라이빗 세일 소식을 가장 먼저 받아보세요.</p>
-        </div>
-        <form class="newsletter__form" action="#" method="post">
-          <input type="email" placeholder="이메일 주소" required aria-label="이메일" />
-          <button type="submit" class="btn btn--primary">구독</button>
-        </form>
+      <div class="archive__content">
+        <span class="archive__label">Archive · 26 S/S</span>
+        <h2 class="archive__title">Between<br />Seasons</h2>
+        <p class="archive__text">계절의 경계에서 만나는 레이어. Archive 전체를 감상하세요.</p>
+        <a href="pages/editorial.html" class="btn btn--outline-light">Archive 보기</a>
       </div>
     </section>
   </main>
 
-  <!-- 푸터 -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer__top">
-        <div class="footer__brand">
-          <a href="index.html" class="brand-logo brand-logo--footer" aria-label="yellujean">
-            <span class="brand-logo__wordmark" aria-hidden="true">
-              <span class="brand-logo__yellu">yellu</span><span class="brand-logo__jean">jean</span>
-            </span>
-            <span class="brand-logo__tagline">official store</span>
-          </a>
-          <p>yellujean 공식 온라인 스토어.<br />직접 기획·생산하는 자사 브랜드입니다.</p>
-        </div>
-        <div class="footer__cols">
-          <div class="footer__col">
-            <h4>Shop</h4>
-            <ul>
-              <li><a href="pages/new.html">신상품</a></li>
-              <li><a href="pages/women.html">여성</a></li>
-              <li><a href="pages/men.html">남성</a></li>
-              <li><a href="pages/acc.html">액세서리</a></li>
-              <li><a href="pages/sale.html">세일</a></li>
-            </ul>
-          </div>
-          <div class="footer__col">
-            <h4>Info</h4>
-            <ul>
-              <li><a href="pages/about.html">브랜드 소개</a></li>
-              <li><a href="pages/editorial.html">에디토리얼</a></li>
-              <li><a href="#">매장 안내</a></li>
-              <li><a href="#">채용</a></li>
-            </ul>
-          </div>
-          <div class="footer__col">
-            <h4>Support</h4>
-            <ul>
-              <li><a href="#">고객센터</a></li>
-              <li><a href="#">배송·반품</a></li>
-              <li><a href="#">사이즈 가이드</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
-          </div>
-          <div class="footer__col footer__col--contact">
-            <h4>Contact</h4>
-            <p>1588-0000</p>
-            <p>평일 10:00 – 18:00</p>
-            <div class="footer__social">
-              <a href="#" aria-label="Instagram">IG</a>
-              <a href="#" aria-label="YouTube">YT</a>
-            </div>
-          </div>
-        </div>
+    <div class="container footer__inner">
+      <div class="footer__main">
+        <p class="footer__copyright"><strong>&copy; 2026 VLAH.DANG</strong></p>
+        <nav class="footer__links" aria-label="footer links">
+          <ul class="footer__link-group">
+            <li><a href="#">ACCOUNT</a></li>
+            <li><a href="#">ORDER STATUS</a></li>
+            <li><a href="#">WISHLIST</a></li>
+          </ul>
+          <ul class="footer__link-group">
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">Q&amp;A</a></li>
+          </ul>
+          <ul class="footer__link-group">
+            <li><a href="#">SHIPPING &amp; PAYMENTS</a></li>
+            <li><a href="#">TERMS &amp; CONDITIONS</a></li>
+            <li><a href="#">PRIVACY POLICY</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="footer__bottom">
-        <p>© 2026 yellujean. All rights reserved.</p>
-        <div class="footer__legal">
-          <a href="#">이용약관</a>
-          <a href="#">개인정보처리방침</a>
-          <a href="#">사업자정보</a>
-        </div>
+      <div class="footer__company">
+        <span>&#49345;&#54840; &#48660;&#46972;&#45817;&#47112;&#51060;&#48660;</span>
+        <span>&#45824;&#54364;&#51088; &#51076;&#50976;&#51652;</span>
+        <span>&#51452;&#49548; 05023 &#49436;&#50872;&#53945;&#48324;&#49884; &#44305;&#51652;&#44396; &#44305;&#45208;&#47336;&#47196;30&#45208;&#44600; 28 (&#44396;&#51032;&#46041;) 201&#54840;</span>
+        <span>&#44256;&#44061;&#49468;&#53552; 01097076461</span>
+        <span>&#51060;&#47700;&#51068; yelluj00@naver.com</span>
+        <span>&#49324;&#50629;&#51088;&#46321;&#47197;&#48264;&#54840; 102-19-52975</span>
+        <span>&#53685;&#49888;&#54032;&#47588;&#50629; &#49888;&#44256; 2026-&#49436;&#50872;&#44305;&#51652;-1251</span>
+        <a href="#">[&#49324;&#50629;&#51088;&#51221;&#48372;&#54869;&#51064;]</a>
+        <span>&#54840;&#49828;&#54021; &#51228;&#44277; &#52852;&#54168;24(&#51452;)</span>
       </div>
     </div>
   </footer>

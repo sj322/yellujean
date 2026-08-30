@@ -47,6 +47,24 @@
     });
   });
 
+  /* MD recommendation carousel */
+  document.querySelectorAll("[data-md-carousel]").forEach((carousel) => {
+    const track = carousel.querySelector(".md-carousel__track");
+    const prev = carousel.querySelector("[data-md-carousel-prev]");
+    const next = carousel.querySelector("[data-md-carousel-next]");
+    if (!track || !prev || !next) return;
+
+    function scrollByCard(direction) {
+      const card = track.querySelector(".product-card");
+      const gap = parseFloat(getComputedStyle(track).gap) || 0;
+      const distance = card ? card.getBoundingClientRect().width + gap : track.clientWidth;
+      track.scrollBy({ left: direction * distance, behavior: "smooth" });
+    }
+
+    prev.addEventListener("click", () => scrollByCard(-1));
+    next.addEventListener("click", () => scrollByCard(1));
+  });
+
   /* Wishlist toggle */
   document.querySelectorAll(".product-card__wish").forEach((btn) => {
     btn.addEventListener("click", (e) => {

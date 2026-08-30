@@ -13,7 +13,8 @@
   const filterBtns = document.querySelectorAll("[data-filter-type]");
   const emptyState = document.getElementById("empty-state");
 
-  let currentType = "all";
+  const initialType = new URLSearchParams(window.location.search).get("type");
+  let currentType = initialType || "all";
   let currentSort = "newest";
 
   function getProducts() {
@@ -103,6 +104,7 @@
   }
 
   filterBtns.forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.filterType === currentType);
     btn.addEventListener("click", () => {
       filterBtns.forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
@@ -132,7 +134,7 @@
     guide: "Guide",
     interview: "Interview",
     edit: "The Edit",
-    lookbook: "Lookbook",
+    archive: "Archive",
   };
 
   grid.innerHTML = YELLUJEAN_EDITORIALS.map((item) => {

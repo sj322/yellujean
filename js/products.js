@@ -1,11 +1,11 @@
-const WOMEN_IMAGES = [
+const CLOTHING_IMAGES_PRIMARY = [
   "women/IMG_7144/main.jpg",
   "women/IMG_7201/main.jpg",
   "women/IMG_7204/main.jpg",
   "women/IMG_7207/main.jpg",
 ];
 
-const MEN_IMAGES = [
+const CLOTHING_IMAGES_SECONDARY = [
   "men/IMG_5125/main.jpg",
   "men/IMG_7265/main.jpg",
   "men/IMG_8310/main.jpg",
@@ -17,7 +17,7 @@ const MEN_IMAGES = [
 ];
 
 function productImage(category, index, offset = 0) {
-  const pool = category === "women" ? WOMEN_IMAGES : MEN_IMAGES;
+  const pool = category === "primary" ? CLOTHING_IMAGES_PRIMARY : CLOTHING_IMAGES_SECONDARY;
   return pool[(index + offset) % pool.length];
 }
 
@@ -27,11 +27,11 @@ const YELLUJEAN_PRODUCTS = [
     name: "????? ? ??? ??",
     price: 890000,
     salePrice: null,
-    category: "women",
+    category: "clothing",
     type: "outer",
-    tags: ["new", "best"],
-    image: productImage("women", 0),
-    imageHover: productImage("women", 0, 1),
+    tags: ["new", "best", "md"],
+    image: productImage("primary", 0),
+    imageHover: productImage("primary", 0, 1),
     badge: "NEW",
   },
   {
@@ -39,11 +39,11 @@ const YELLUJEAN_PRODUCTS = [
     name: "???? ??? ???",
     price: 420000,
     salePrice: null,
-    category: "women",
+    category: "clothing",
     type: "knit",
-    tags: ["new"],
-    image: productImage("women", 1),
-    imageHover: productImage("women", 1, 1),
+    tags: ["new", "md"],
+    image: productImage("primary", 1),
+    imageHover: productImage("primary", 1, 1),
     badge: "NEW",
   },
   {
@@ -51,11 +51,11 @@ const YELLUJEAN_PRODUCTS = [
     name: "??? ?? ????",
     price: 380000,
     salePrice: null,
-    category: "women",
+    category: "clothing",
     type: "pants",
-    tags: ["best"],
-    image: productImage("women", 2),
-    imageHover: productImage("women", 2, 1),
+    tags: ["best", "md"],
+    image: productImage("primary", 2),
+    imageHover: productImage("primary", 2, 1),
     badge: null,
   },
   {
@@ -63,11 +63,11 @@ const YELLUJEAN_PRODUCTS = [
     name: "?? ?? ????",
     price: 520000,
     salePrice: null,
-    category: "women",
+    category: "clothing",
     type: "top",
-    tags: ["new"],
-    image: productImage("women", 3),
-    imageHover: productImage("women", 3, 1),
+    tags: ["new", "md"],
+    image: productImage("primary", 3),
+    imageHover: productImage("primary", 3, 1),
     badge: "NEW",
   },
   {
@@ -75,11 +75,11 @@ const YELLUJEAN_PRODUCTS = [
     name: "?? ????? ? ??",
     price: 1290000,
     salePrice: 1032000,
-    category: "women",
+    category: "clothing",
     type: "outer",
     tags: ["best", "sale"],
-    image: productImage("women", 0, 2),
-    imageHover: productImage("women", 0, 3),
+    image: productImage("primary", 0, 2),
+    imageHover: productImage("primary", 0, 3),
     badge: "20%",
   },
   {
@@ -87,11 +87,11 @@ const YELLUJEAN_PRODUCTS = [
     name: "??? ?? ??",
     price: 680000,
     salePrice: 544000,
-    category: "women",
+    category: "clothing",
     type: "outer",
     tags: ["sale"],
-    image: productImage("women", 1, 2),
-    imageHover: productImage("women", 1, 3),
+    image: productImage("primary", 1, 2),
+    imageHover: productImage("primary", 1, 3),
     badge: "20%",
   },
   {
@@ -99,11 +99,11 @@ const YELLUJEAN_PRODUCTS = [
     name: "???? ? ????",
     price: 980000,
     salePrice: null,
-    category: "men",
+    category: "clothing",
     type: "outer",
     tags: ["new", "best"],
-    image: productImage("men", 0),
-    imageHover: productImage("men", 0, 1),
+    image: productImage("secondary", 0),
+    imageHover: productImage("secondary", 0, 1),
     badge: "NEW",
   },
   {
@@ -111,11 +111,11 @@ const YELLUJEAN_PRODUCTS = [
     name: "????? ???? ??",
     price: 390000,
     salePrice: null,
-    category: "men",
+    category: "clothing",
     type: "top",
     tags: ["new"],
-    image: productImage("men", 1),
-    imageHover: productImage("men", 1, 1),
+    image: productImage("secondary", 1),
+    imageHover: productImage("secondary", 1, 1),
     badge: "NEW",
   },
   {
@@ -123,11 +123,11 @@ const YELLUJEAN_PRODUCTS = [
     name: "???? ? ??",
     price: 420000,
     salePrice: null,
-    category: "men",
+    category: "clothing",
     type: "pants",
     tags: ["best"],
-    image: productImage("men", 2),
-    imageHover: productImage("men", 2, 1),
+    image: productImage("secondary", 2),
+    imageHover: productImage("secondary", 2, 1),
     badge: null,
   },
   {
@@ -135,11 +135,11 @@ const YELLUJEAN_PRODUCTS = [
     name: "??? ? ??",
     price: 1890000,
     salePrice: 1512000,
-    category: "men",
+    category: "clothing",
     type: "outer",
     tags: ["sale", "best"],
-    image: productImage("men", 3),
-    imageHover: productImage("men", 3, 1),
+    image: productImage("secondary", 3),
+    imageHover: productImage("secondary", 3, 1),
     badge: "20%",
   },
   {
@@ -195,11 +195,11 @@ const YELLUJEAN_PRODUCTS = [
     name: "??? ? ???",
     price: 480000,
     salePrice: null,
-    category: "women",
+    category: "clothing",
     type: "knit",
     tags: ["new"],
-    image: productImage("women", 2, 2),
-    imageHover: productImage("women", 2, 3),
+    image: productImage("primary", 2, 2),
+    imageHover: productImage("primary", 2, 3),
     badge: "NEW",
   },
   {
@@ -207,11 +207,11 @@ const YELLUJEAN_PRODUCTS = [
     name: "?????? ? ???",
     price: 560000,
     salePrice: 448000,
-    category: "women",
+    category: "clothing",
     type: "pants",
     tags: ["sale"],
-    image: productImage("women", 3, 2),
-    imageHover: productImage("women", 3, 3),
+    image: productImage("primary", 3, 2),
+    imageHover: productImage("primary", 3, 3),
     badge: "20%",
   },
   {
@@ -219,11 +219,11 @@ const YELLUJEAN_PRODUCTS = [
     name: "?? ??? ???",
     price: 190000,
     salePrice: null,
-    category: "men",
+    category: "clothing",
     type: "top",
     tags: ["new"],
-    image: productImage("men", 4),
-    imageHover: productImage("men", 4, 1),
+    image: productImage("secondary", 4),
+    imageHover: productImage("secondary", 4, 1),
     badge: "NEW",
   },
   {
@@ -293,7 +293,7 @@ const YELLUJEAN_EDITORIALS = [
     title: "Neutral Palette",
     excerpt: "??? ??? ???? ??? ?",
     date: "2026-04-22",
-    category: "lookbook",
+    category: "archive",
     image: "assets/home/IMG_8319.jpg",
     featured: false,
   },
@@ -309,25 +309,18 @@ const YELLUJEAN_EDITORIALS = [
 ];
 
 const PAGE_CONFIG = {
+  md: {
+    title: "MD RECOMMEND",
+    subtitle: "MD RECOMMEND",
+    description: "Selected MD recommendation products.",
+    filter: (p) => p.tags.includes("md"),
+    types: ["all", "outer", "top", "knit", "pants"],
+  },
   new: {
     title: "NEW",
     subtitle: "?? ? ??",
     description: "26 S/S ??, yellujean? ??? ??.",
     filter: (p) => p.tags.includes("new"),
-    types: ["all", "outer", "top", "knit", "pants"],
-  },
-  women: {
-    title: "WOMEN",
-    subtitle: "?? ???",
-    description: "yellujean ?? ?? ? ??? ???? ?????.",
-    filter: (p) => p.category === "women",
-    types: ["all", "outer", "top", "knit", "pants"],
-  },
-  men: {
-    title: "MEN",
-    subtitle: "?? ???",
-    description: "yellujean ?? ?? ? ????? ??? ???.",
-    filter: (p) => p.category === "men",
     types: ["all", "outer", "top", "knit", "pants"],
   },
   acc: {
